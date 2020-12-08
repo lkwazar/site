@@ -864,7 +864,7 @@ body.touch .sub-sub-main-menu__list.open {
 
 }
 @media screen and (max-width: 425px) {
-	body {font-size: 12px;}
+	table {font-size: 12px;}
 	/* .banners_container {max-width: 250px;} */
 	.big-image__image {height: 300px;}
 }
