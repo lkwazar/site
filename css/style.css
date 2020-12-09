@@ -175,14 +175,9 @@ th {
     background-color: #4a4a4a;
     border-color: #3e3e3e;
 }
-table.table-сontact tr:last-child {
-	width: 100%;
-  }
-table.table-сontact th {
-	line-height: 1;
-	font-weight: 500;
-}
+.mobile-table {
 
+}
 /* ===== header ===== */
 .header-top {
 	display: flex;
@@ -361,7 +356,7 @@ body.mouse .sub-sub-main-menu__list {
 body.touch .sub-sub-main-menu__list {display: none;}
 .sub-sub-main-menu__link {
 	display: block;
-	padding: 5px 25px;
+	padding: 0 25px;
 	color: #4b6a98;
 }
 body.mouse .main-menu__list>li:hover .sub-main-menu__list {
@@ -409,9 +404,14 @@ body.touch .sub-sub-main-menu__list.open {
 .right-menu__list>li:hover {
 	border-right: 5px solid #4b6a98;
 	border-left: 5px solid #4b6a98;
+	background: #e8e8e8;
 }
 .right-menu__list>li a:hover {color: #4b6a98;}
-.right-menu__link {color: #757575;}
+.right-menu__link,
+.sub-right-menu__link {color: #757575;}
+
+.sub-right-menu__list>li>a {padding-left: 20px;}
+/* .sub-right-menu__list>li>a:first-child {padding-top: 0;} */
 /* ==== right-menu ==== */
 
 
@@ -429,12 +429,13 @@ body.touch .sub-sub-main-menu__list.open {
 .big-image__column {flex: 0 0 50%;}
 .big-image__image {
 	background: url("../img/image-home_1.jpg") 50%/cover no-repeat;
-	height: 400px;
+	min-height: 400px;
 	justify-content: flex-end;
+	align-items: flex-end;
 }
 .big-image__box {
-	padding: 20px;
-	margin: 140px 0 0 0;
+	padding: 20px 20px 40px 20px;
+	/* margin: 140px 0 0 0; */
     display: block;
     width: 40%;
 }
@@ -728,9 +729,9 @@ body.touch .sub-sub-main-menu__list.open {
 /* @media */
   @media screen and (max-width: 1024px) {
 	/* .container {max-width: 1000px;} */
-	.big-image__box {
+	/* .big-image__box {
 		margin: 70px 0 0 0;
-	}
+	} */
 	.big-image__title {
 		font-size: 18px;
 	}
@@ -811,6 +812,7 @@ body.touch .sub-sub-main-menu__list.open {
 	.sub-sub-main-menu__list {box-shadow: none;}
 	.main-menu__list {
 		display: none;
+		margin-top: 15px;
 		transition: all 0.3s ease 0s;
 	}
 	.main-menu__list.active {display: block;}
@@ -827,6 +829,16 @@ body.touch .sub-sub-main-menu__list.open {
 		background: #4b6a98;
 	}
 	.main-menu__link {padding: 0 10px;}
+	.main-menu__link,
+	.sub-main-menu__link {
+		display: block;
+    	width: calc(100% - 50px);
+	}
+	.sub-main-menu__link  {padding: 0 10px 0 25px;}
+	.arrow-bottom, .sub-arrow-bottom {
+		width: 50px;
+		text-align: center;
+	}
 	.sub-main-menu__list,
 	.sub-sub-main-menu__list {
 		position: relative;
@@ -859,7 +871,7 @@ body.touch .sub-sub-main-menu__list.open {
 	.header-top__image-pc {display: none;}
 	.header-top__image-mobile {display: block;}
 	.big-image__box {display: none;}
-	.big-image__image {height: 300px;}
+	.big-image__image {min-height: auto; height: 300px;}
 	.contact-card__logo {flex: 0 0 100%;}
 
 }
