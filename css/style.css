@@ -678,6 +678,8 @@ body.touch .sub-sub-main-menu__list.open {display: block;}
 		display: none;
 		font-size: 14px;
 		line-height: 3;
+		overflow: auto;
+		padding: 50px 0 0 0;
 		background: #545454;
 	}
 	.main-menu .container, .sub-main-menu__list {
@@ -687,12 +689,11 @@ body.touch .sub-sub-main-menu__list.open {display: block;}
 	.main-menu.open {
 		display: flex;
 		position: fixed;
-		top: 50px;
+		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		overflow: auto;
-		z-index: 10;
+		z-index: 5;
 	}
 	.main-menu__burger {
 		display: block;
