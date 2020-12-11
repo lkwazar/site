@@ -28,7 +28,8 @@ if(isMobile.any()){
 
     document.querySelector('.main-menu__burger').addEventListener('click', function() {
         document.querySelector('.main-menu__burger').classList.toggle('active');
-        document.querySelector('.main-menu__list').classList.toggle('active');
+        document.querySelector('.main-menu').classList.toggle('open');
+        document.querySelector('body').classList.toggle('lock');
     });
 
 }else{
