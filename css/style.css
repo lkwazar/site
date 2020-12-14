@@ -679,7 +679,7 @@ body.touch .sub-sub-main-menu__list.open {display: block;}
 	.search-input {width: 150px;}
 	.main-menu {
 		display: none;
-		font-size: 14px;
+		font-size: 15px;
 		line-height: 3;
 		overflow: auto;
 		padding: 50px 0 0 0;
