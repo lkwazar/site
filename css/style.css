@@ -795,7 +795,10 @@ body.touch .sub-sub-main-menu__list.open {display: block;}
 	.sub-main-menu__list.open,
 	.sub-sub-main-menu__list.open {display: block;}
 	.sub-main-menu__link {color: #4a4a4a;}
-	.sub-sub-main-menu__link {color: #7b7b7b;}
+	.sub-sub-main-menu__link {
+		padding: 0 0 0 35px;
+		color: #7b7b7b;
+	}
 	.sub-main-menu__list>li:hover, .sub-sub-main-menu__list>li:hover {background: none;}
 	.banners__row {margin: 0;}
 	.banner-item__image img {width: 100px;}
