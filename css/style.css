@@ -439,7 +439,7 @@ body.touch .sub-sub-main-menu__list.open {display: block;}
 }
 .page {display: flex;}
 .page-content {flex: 1 1 auto;}
-.page-content p::first-letter {margin-left: 2rem;}
+/* .page-content p::first-letter {margin-left: 2rem;} */
 .page-content img {max-width: 100%;}
 .page-content img {margin: 5px 5px;}
 .page-content img.center-img {
