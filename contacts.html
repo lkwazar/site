@@ -12,21 +12,18 @@
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
+	
 	<!-- Тело стрпницы -->
-
 	<body class="content-all">
 		<header>
 			<div class="header-top">
 				<div class="container">
 					<div class="header-top__row">
-						<div class="header-top__text">
-							<a href="lang.html" class="eye-icon"><i class="fa fa-eye fa-lg"></i><span>Версия для слабовидящих</span></a>	
-						</div>
-						<div class="header-top-item">
-							<a href="lang.html" class="header-top-link header-top-link__lang active">RU</a>
-							<a href="" class="header-top-link header-top-link__lang">EN</a>
-							<a href="lang.html" class="header-top-link header-top-link__login"><i class="fa fa-user"></i></a>
-							<!-- <a href="" class="header-top-lang__item">UA</a> -->
+						<div class="switch-panel">
+							<a href="#" class="switch-panel__link switch-panel__link_theme_fine-visible"><i class="fa fa-eye fa-lg"></i><span>Версия для слабовидящих</span></a>
+							<a href="lang.html" class="switch-panel__link active">RU</a>
+							<a href="lang.html" class="switch-panel__link">EN</a>
+							<a href="lang.html" class="switch-panel__link switch-panel__link_theme_user"><i class="fa fa-user"></i></a>
 						</div>
 						<div class="main-menu__burger">
 							<span></span>
@@ -37,18 +34,18 @@
 			<div class="header-bottom">
 				<div class="container">
 					<div class="header-bottom__row">
-						<div class="header-top__image-pc">
-							<a href="index.html"><img src="img/logo_red.png" alt="" class="header-top__logo"></a>
+						<div class="header-bottom__image-pc">
+							<a href="index.html"><img src="img/logo_red.png" alt="" class="header-bottom__logo"></a>
 						</div>
-						<div class="header-top__image-mobile">
-							<a href="index.html"><img src="img/logo_mobile.png" alt="" class="header-top__logo"></a>
+						<div class="header-bottom__image-mobile">
+							<a href="index.html"><img src="img/logo_mobile.png" alt="" class="header-bottom__logo"></a>
 						</div>
-						<div class="header-top-search">
-							<div class="input-holder">
-								<input type="text" class="search-input" placeholder="Поиск по сайту">
-								<a href="#" class="search-icon"><i class="fa fa-search"></i></a>								
+						<form class="search-form">
+							<div class="search-form__input-holder">
+								<input type="text" class="search-form__input" placeholder="Поиск по сайту">
+								<a href="#" class="search-form__icon"><i class="fa fa-search"></i></a>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -139,11 +136,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="wraper">
+		<div class="content">
 			<div class="container">
-				<div class="page">
+				<div class="content__row">
 					<div class="page-content">
-						<div class="page-content__title">
+						<div class="page-title page-title_theme_blue">
 							<h1>Контакты</h1>
 						</div>
 						<div class="contact-card">
