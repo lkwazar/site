@@ -50,7 +50,7 @@ if(isMobile.any()) {
 
 // <Картинка (img) в фон (background-image)>
 function ibg() {
-    let ibg = document.querySelectorAll('.ibg');
+    var ibg = document.querySelectorAll('.ibg');
 
     for (i=0; i<ibg.length; i++) {
         if(ibg[i].querySelector('img')) {
@@ -68,9 +68,9 @@ ibg();
 window.addEventListener('resize', adaptiveFunction);
 
 function adaptiveFunction() {
-    let search = document.querySelector('.search-form');
-    let switchPanel = document.querySelector('.main-menu__list');
-    let headerBottom = document.querySelector('.header-bottom__row');
+    var search = document.querySelector('.search-form');
+    var switchPanel = document.querySelector('.main-menu__list');
+    var headerBottom = document.querySelector('.header-bottom__row');
 
     if(window.innerWidth < 621) {
         // Не работает в IE - switchPanel.before(search);
