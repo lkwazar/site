@@ -17,7 +17,7 @@ const toggleBurger = function() {
     btnBurger.classList.toggle('active');
 }
 
-if(isMobile.any()){
+if(isMobile.any()) {
     body.classList.add('touch');
     let arrow=document.querySelectorAll('.arrow');
 
@@ -29,36 +29,26 @@ if(isMobile.any()){
         
     });
 
-    for(i=0; i<arrow.length; i++){
+    for(i=0; i<arrow.length; i++) {
         let thisLink=arrow[i].previousElementSibling;
         let subMenu=arrow[i].nextElementSibling;
         let thisArrow=arrow[i];
 
         thisLink.classList.add('parent');
         
-        arrow[i].addEventListener('click', function(){
+        arrow[i].addEventListener('click', function() {
             subMenu.classList.toggle('open');
             thisArrow.classList.toggle('active');
         });
     }
 
-    // document.addEventListener('click', function(e) {
-    //     const target = e.target;
-    //     const its_menu = target == menu || menu.contains(target);
-    //     const its_btnBurger = target == btnBurger;
-    //     const menu_is_active = menu.classList.contains('open');
-
-    //     if (!its_menu && !its_btnBurger && menu_is_active) {
-    //         toggleBurger();
-    //         toggleMenu();
-    //     }
-    // });
-
 }else{
     body.classList.add('mouse');
 }
 
-// image to backgroundImage
+// =================================================================================
+
+// <Картинка (img) в фон (background-image)>
 function ibg() {
     let ibg = document.querySelectorAll('.ibg');
 
@@ -70,3 +60,26 @@ function ibg() {
 }
 
 ibg();
+// </Картинка (img) в фон (background-image)>
+
+// =================================================================================
+
+// <События при изменении окна браузера>
+window.onresize = adaptiveFunction;
+
+function adaptiveFunction() {
+    let search = document.querySelector('.search-form');
+    let switchPanel = document.querySelector('.main-menu__list');
+    let headerBottom = document.querySelector('.header-bottom__row');
+
+    if(window.innerWidth < 621) {
+        // Не работает в IE - switchPanel.before(search);
+        switchPanel.insertAdjacentElement('beforeBegin', search);
+    }else{
+        // Не работает в IE - headerBottom.append(search);
+        headerBottom.insertAdjacentElement('beforeEnd', search);
+    }
+}
+
+adaptiveFunction();
+// </События при изменении окна браузера>
