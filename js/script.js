@@ -65,21 +65,21 @@ ibg();
 // =================================================================================
 
 // <События при изменении окна браузера>
-window.onresize = adaptiveFunction;
+// window.onresize = adaptiveFunction;
 
-function adaptiveFunction() {
-    let search = document.querySelector('.search-form');
-    let switchPanel = document.querySelector('.main-menu__list');
-    let headerBottom = document.querySelector('.header-bottom__row');
+// function adaptiveFunction() {
+//     let search = document.querySelector('.search-form');
+//     let switchPanel = document.querySelector('.main-menu__list');
+//     let headerBottom = document.querySelector('.header-bottom__row');
 
-    if(window.innerWidth < 621) {
-        // Не работает в IE - switchPanel.before(search);
-        switchPanel.insertAdjacentElement('beforeBegin', search);
-    }else{
-        // Не работает в IE - headerBottom.append(search);
-        headerBottom.insertAdjacentElement('beforeEnd', search);
-    }
-}
+//     if(window.innerWidth < 621) {
+//         // Не работает в IE - switchPanel.before(search);
+//         switchPanel.insertAdjacentElement('beforeBegin', search);
+//     }else{
+//         // Не работает в IE - headerBottom.append(search);
+//         headerBottom.insertAdjacentElement('beforeEnd', search);
+//     }
+// }
 
-adaptiveFunction();
+// adaptiveFunction();
 // </События при изменении окна браузера>
