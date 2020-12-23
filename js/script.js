@@ -65,27 +65,21 @@ ibg();
 // =================================================================================
 
 // <События при изменении окна браузера>
-window.addEventListener('resize', adaptiveFunction);
+window.onresize = adaptiveFunction;
 
-function adaptiveHeader(w,h) {
-    var search = document.querySelector('.search-form');
-    var switchPanel = document.querySelector('.main-menu__list');
-    var headerBottom = document.querySelector('.header-bottom__row');
+function adaptiveFunction() {
+    let search = document.querySelector('.search-form');
+    let switchPanel = document.querySelector('.main-menu__list');
+    let headerBottom = document.querySelector('.header-bottom__row');
 
-    if(w < 621) {
+    if(window.innerWidth < 620) {
         // Не работает в IE - switchPanel.before(search);
+        search.classList.add('done')
         switchPanel.insertAdjacentElement('beforeBegin', search);
-    }else{
+    }else if(window.innerWidth > 620) {
         // Не работает в IE - headerBottom.append(search);
         headerBottom.insertAdjacentElement('beforeEnd', search);
     }
-}
-
-function adaptiveFunction() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-
-    adaptiveHeader(w,h);
 }
 
 adaptiveFunction();
