@@ -484,6 +484,22 @@ p {
   }
 }
 
+@media (max-width: 620px) {
+  .search-form {
+    display: none;
+  }
+}
+
+.main-menu_search-form {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .main-menu_search-form {
+    display: block;
+  }
+}
+
 .search-form__input-holder {
   display: -webkit-box;
   display: -ms-flexbox;
