@@ -19,7 +19,7 @@ const toggleBurger = function() {
 
 if(isMobile.any()) {
     body.classList.add('touch');
-    let arrow=document.querySelectorAll('.arrow');
+    let arrow=document.querySelectorAll('.arrow_touch');
 
     btnBurger.addEventListener('click', function(e) {
         e.stopPropagation();
