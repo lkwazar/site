@@ -936,6 +936,8 @@ body.touch .sub-sub-main-menu__list.open {
 }
 
 .sub-right-menu__link {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
