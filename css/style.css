@@ -897,6 +897,7 @@ body.touch .sub-sub-main-menu__list.open {
 }
 
 .right-menu__list > li {
+  list-style-type: none;
   margin-bottom: 2px;
   border-left: 5px solid #f3f3f3;
   border-right: 5px solid #f3f3f3;
